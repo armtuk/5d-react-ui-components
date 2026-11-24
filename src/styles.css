@@ -1,0 +1,16 @@
+/*
+ * Import after `@import "tailwindcss"` in the consuming app's stylesheet.
+ *
+ * `@source` resolves relative to this file, so it registers the published bundle with the app's
+ * Tailwind build. Tailwind skips node_modules by default, so without it the component classes are
+ * never generated.
+ */
+@source "./";
+
+/*
+ * `default` yields to the app: a theme that defines the token keeps its own value, whichever order
+ * the stylesheets are imported in.
+ */
+@theme default inline {
+    --color-border: var(--border, color-mix(in oklab, currentColor 20%, transparent));
+}

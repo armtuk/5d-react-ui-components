@@ -1,0 +1,33 @@
+# Build & dependency artifacts
+node_modules/
+dist/
+*.tgz
+*.tsbuildinfo
+
+# Local env and registry credentials
+.env
+.env.*
+!.env.example
+.npmrc
+
+# Local tooling
+.codex
+.idea/
+.DS_Store
+*.log
+# AI agent config (symlinked from plexq-ai-resources)
+.claude
+.agents/skills
+.agents/guidance
+.agents/languages
+.agents/frameworks
+.agents/bin
+.agents/cache
+.agents/omf
+.agents/project-tooling
+.agents/code-examples
+.agents/*.md
+.agents/plans/.active
+.agents/templates
+# Session files
+*.session.id
